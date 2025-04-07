@@ -1,0 +1,20 @@
+<!-- authapp/templates/error.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <title>Error</title>
+</head>
+<body>
+    <h2>Error</h2>
+    {% if error %}
+        <div class="error-container">
+            {{ error }}  <!-- Mostrar el mensaje de error dentro del cuadro -->
+        </div>
+    {% endif %}
+    <a href="{% url 'login' %}">Volver al login</a>
+</body>
+</html>
