@@ -6,22 +6,24 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    flex-direction: column;
+
 }
 
-form {
-    background-color: rgb(255, 255, 255);
+h2 {
+    text-align: center;
+    color: #130d0d;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.box-container {
+    background-color: #ffffff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 400px;
-}
-
-h2 {
-    text-align: center;
-    color: #ffffff;
-    margin-top: 10px;
-    margin-bottom: 20px;
 }
 
 form p {

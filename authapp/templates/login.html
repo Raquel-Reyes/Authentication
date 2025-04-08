@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link rel="stylesheet" href="{% static 'login.css' %}">
-
     <title>Login</title>
 </head>
 <body>
-    <h2>Iniciar sesión</h2>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Ingresar</button>
-    </form>
-    
-    
+    <div class="box-container">
+        <h2>Iniciar sesión</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Ingresar</button>
+            <p>¿No tienes una cuenta? <a href="{% url 'register' %}">Crear cuenta</a></p>
+
+        </form>
+    </div>
 </body>
 </html>

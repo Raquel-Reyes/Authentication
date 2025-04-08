@@ -47,18 +47,10 @@ def register_view(request):
 
     return render(request, "register.html", {'form': form}) 
 
-
 def dashboard_view(request):
-    #if 'user_id' in request.session:
     user_id = request.user_id
     usuario = request.usuario
-
-    return HttpResponse(f'Bienvenido {usuario} su ID es {user_id}')
-
-    #if request.user.is_authenticated:
-     #   return render(request, 'dashboard.html')
-    #else:
-     #   return redirect('login')  
+    return render(request, 'dashboard.html', {'user_id': user_id, 'usuario': usuario})
 
 def error_view(request):
     error_message = "Ocurrió un error al intentar iniciar sesión."
